@@ -1,0 +1,9 @@
+dist/
+build/
+venv/
+
+booking.lic
+b_config.json
+*.zip
+*.spec
+log.txt

@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 import json
 import hashlib
 
-print("This program takes a little while to scan all available courts at your specified time with the availabler partner player. please hold tight.....\n when this window is closed, you can view the log.txt to see the result.")
+#print("This program takes a little while to scan all available courts at your specified time with the availabler partner player. please hold tight.....\n when this window is closed, you can view the log.txt to see the result.")
 # Check if log gile exists, if not create it with write permissions
 log_file_path = "log.txt"
 if not os.path.exists(log_file_path):
@@ -21,9 +21,10 @@ password = config['password']
 book_day = config['book_day']
 player_list = config['player_list']
 book_slot = config['book_slot']
-
+userId="hgglen@gmail.com"
 hashed_userId = hashlib.sha256(userId.encode()).hexdigest()
-#print(hashed_userId)
+print(userId," authority code: ", hashed_userId)
+exit(0)
 if hashed_userId != lic:
     with open(log_file_path, 'w', encoding="utf-8") as log_file:
         log_file.write("Sorry. You don't have the authority to use booking.exe\n")
